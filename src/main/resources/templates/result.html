@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Result Page</title>
+</head>
+<body>
+
+<div class="main-container container py-5 px-4">
+    <div class="card bg-dark text-light py-5 px-4 mx-auto" >
+
+        <h3 class="bg-danger text-center mb-5 p-2">REZULTAT</h3>
+
+        <div class="d-flex justify-content-center">
+            <p>Raspunsuri corecte:&nbsp;&nbsp;</p>
+            <p data-th-if="${result}" data-th-text="${result.totalCorrect}"></p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <p>Raspunsuri incorecte:&nbsp;&nbsp;</p>
+            <p data-th-if="${result}" data-th-text="${result.totalWrong}"></p>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+
+            <a data-th-href = "@{/questions}"> Back to Questions List</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
